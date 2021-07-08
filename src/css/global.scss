@@ -1,0 +1,132 @@
+$blue: #3419ff;
+$orange: #ff6700;
+$black: #1a1a1a;
+$white: #f0f0f0;
+
+@font-face {
+  font-family: 'Monument Extended';
+  src: url('~@/src/fonts/MonumentExtended-Ultrabold.otf') format('opentype');
+}
+.home::before {
+  position: absolute;
+  background: $white;
+  content: '';
+  height: 100vh;
+  width: 100vw;
+  z-index: -3;
+}
+.home {
+  overflow: hidden;
+  position: relative;
+  pointer-events: none;
+  .img_top {
+    display: block;
+    height: 100vh;
+  }
+  .img_top img {
+    height: 100vh;
+    right: 50%;
+    position: absolute;
+    transform: translateX(50%);
+  }
+  .designer_letter::before,
+  .designer_letter::after {
+    content: '';
+    display: inline-block;
+    height: 90vh;
+    position: absolute;
+    width: 45vw;
+    margin: 5vh 5vw;
+    top: 0vh;
+  }
+  .designer_letter::before {
+    background: $orange;
+    filter: invert(1);
+    z-index: -3;
+  }
+  .designer_letter::after {
+    backdrop-filter: invert(1);
+  }
+  .dev_letter::before,
+  .dev_letter::after {
+    content: '';
+    display: inline-block;
+    height: 90vh;
+    position: absolute;
+    width: 45vw;
+    margin: 5vh 5vw;
+    right: 0vw;
+    bottom: 5vh;
+  }
+  .dev_letter::before {
+    background: $blue;
+    filter: invert(1);
+    z-index: -3;
+  }
+  .dev_letter::after {
+    backdrop-filter: invert(1);
+    z-index: -1;
+  }
+  img#ascii_dev {
+    height: 300px;
+    position: absolute;
+    top: 0%;
+    right: 16.2%;
+  }
+  .designer_letter {
+    color: $black;
+    top: 0;
+    line-height: 1.1em;
+    position: absolute;
+    font-family: Monument Extended;
+    font-size: 14.6vh;
+  }
+  .designer_letter p {
+    margin-top: 10px;
+  }
+  .dev_letter {
+    color: $white;
+    font-family: Fira Sans;
+    font-size: 11vw;
+    position: absolute;
+    bottom: -5vh;
+    right: 0;
+    z-index: -2;
+  }
+  .designer_typo {
+    font-family: Monument Extended;
+    font-size: 11vw;
+    position: absolute;
+  }
+  ul {
+    position: absolute;
+    display: grid;
+    font-size: 3em;
+    list-style-type: none;
+    pointer-events: auto;
+  }
+  .list_designer {
+    font-family: Montserrat;
+    bottom: 20vh;
+    font-weight: 800;
+    left: 3vw;
+  }
+  .list_dev {
+    font-family: Fira Sans;
+    text-align: right;
+    right: 6vw;
+    top: 17vh;
+    font-color: $white;
+  }
+  [class*='hover_area'] {
+    height: 100vh;
+    width: 30vw;
+    position: absolute;
+    top: 0;
+    pointer-events: auto;
+  }
+  .dev_hover_area {
+    right: 0;
+  }
+}
+
