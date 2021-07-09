@@ -1,8 +1,6 @@
-import Sass from 'sass';
-
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -23,6 +21,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'modern-css-reset'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -40,15 +39,19 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-   'nuxt-webfontloader' 
+    'nuxt-webfontloader' 
   ],
   webfontloader: {
     google: {
-      families: ['Montserrat:500,700,800','Fira Sans:700']
+      families: ['Montserrat:500,700,800','Noto Sans JP:900']
     }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: { 
+  },
+
+  server: {
+    host: '0.0.0.0'
   }
 }
