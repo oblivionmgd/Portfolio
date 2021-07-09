@@ -27,77 +27,45 @@
 </template>
 <script></script>
 <style lang="scss">
-$blue: #3419ff;
-$orange: #ff6700;
-$black: #1a1a1a;
-$white: #f0f0f0;
-
-@font-face {
-  font-family: 'Monument Extended';
-  src: url('~@/src/fonts/MonumentExtended-Ultrabold.otf') format('opentype');
-}
-.home::before {
-  position: absolute;
-  background: $white;
-  content: '';
-  height: 100vh;
-  width: 100vw;
-  z-index: -3;
-}
+@import '@/src/css/global.scss';
 .home {
-  overflow: hidden;
-  position: relative;
-  pointer-events: none;
-  .img_top {
+  img_top {
     display: block;
     height: 100vh;
   }
-  .img_top img {
-    height: 100vh;
-    right: 150%;
-    position: absolute;
-    transform: translateX(50%);
-  }
-  .dev_letter::before,
-  .dev_letter::after {
-    content: '';
-    display: inline-block;
-    height: 90vh;
-    position: absolute;
-    width: 90vw;
-    bottom: 5vh;
-    right: -2.5vw;
-    margin: 5vh 5vw;
-  }
-  .dev_letter::before {
-    background: $blue;
-    filter: invert(1);
-    z-index: -3;
-  }
-  .dev_letter::after {
-    -webkit-backdrop-filter: invert(1);
-    backdrop-filter: invert(1);
-    z-index: -1;
-  }
-  img#ascii_dev {
-    height: 300px;
-    position: absolute;
-    top: 0%;
-    right: 16.2%;
-  }
-  h3#who {
-    position: absolute;
-    top: 50vh;
-    right: 30%;
-    color: $white;
-  }
+    img {
+      height: 100vh;
+      right: 150%;
+      position: absolute;
+      transform: translateX(50%);
+    }
   .dev_letter {
     color: $black;
-    font-family: Fira Sans;
+    font-family: Noto Sans JP;
     font-size: 11vw;
     position: absolute;
     bottom: -5vh;
     right: 40px;
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 90vh;
+      position: absolute;
+      width: 90vw;
+      bottom: 5vh;
+      right: -2.5vw;
+      margin: 5vh 5vw;
+    }
+    &::before {
+      background: $blue;
+      filter: invert(1);
+      z-index: -2;
+    }
+    &::after {
+      -webkit-backdrop-filter: invert(1);
+      backdrop-filter: invert(1);
+    }
   }
   .dev_letter p {
     z-index: 0;
@@ -108,6 +76,8 @@ $white: #f0f0f0;
     font-size: 5vh;
     list-style-type: none;
     pointer-events: auto;
+    margin-block-start: 0;
+    padding: 0;
   }
   .list_dev {
     font-size: 4vh;
@@ -117,46 +87,35 @@ $white: #f0f0f0;
     left: 6vw;
     top: 4vw;
     color: $white;
-  }
-  .list_dev a::before,
-  .list_dev a::after {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    width: 0%;
-    height: 15%;
-    left: 0;
-    transform: translate(30px, 16px) rotate(359.5deg);
-    transition: width 0.7s cubic-bezier(0, 0.7, 0.5, 1),
-      transform 0.7s cubic-bezier(0, 0.7, 0.5, 1);
-  }
-  .list_dev a::before {
-    background: $black;
-    -webkit-filter: invert(1);
-    filter: invert(1);
-    z-index: -2;
-  }
-  .list_dev a::after {
-    -webkit-backdrop-filter: invert(1);
-    backdrop-filter: invert(1);
-  }
-  .list_dev a {
-    color: $white;
-  }
-  .list_dev a:hover::before,
-  .list_dev a:hover::after {
-    width: 100%;
-    transform: translate(30px, 10px) rotate(359.5deg);
-  }
-  [class*='hover_area'] {
-    height: 100vh;
-    width: 30vw;
-    position: absolute;
-    top: 0;
-    pointer-events: auto;
-  }
-  .dev_hover_area {
-    right: 0;
+    
+    a {
+      color: $white; 
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 0%;
+        height: 15%;
+        left: 0;
+        transition: width 0.7s cubic-bezier(0, 0.7, 0.5, 1),
+        transform 0.7s cubic-bezier(0, 0.7, 0.5, 1);
+      }
+      &::before {
+        background: $black;
+        -webkit-filter: invert(1);
+        filter: invert(1);
+        z-index: -1;
+      }
+      &::after {
+        -webkit-backdrop-filter: invert(1);
+        backdrop-filter: invert(1);
+      } 
+      &:hover::before,
+      &:hover::after {
+        width: 100%;
+      } 
+    }
   }
 }
 </style>

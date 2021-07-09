@@ -23,110 +23,83 @@ $white: #f0f0f0;
     display: block;
     height: 100vh;
   }
-  .img_top img {
-    height: 100vh;
-    right: 50%;
-    position: absolute;
-    transform: translateX(50%);
-  }
-  .designer_letter::before,
-  .designer_letter::after {
-    content: '';
-    display: inline-block;
-    height: 90vh;
-    position: absolute;
-    width: 45vw;
-    margin: 5vh 5vw;
-    top: 0vh;
-  }
-  .designer_letter::before {
-    background: $orange;
-    filter: invert(1);
-    z-index: -3;
-  }
-  .designer_letter::after {
-    backdrop-filter: invert(1);
-  }
-  .dev_letter::before,
-  .dev_letter::after {
-    content: '';
-    display: inline-block;
-    height: 90vh;
-    position: absolute;
-    width: 45vw;
-    margin: 5vh 5vw;
-    right: 0vw;
-    bottom: 5vh;
-  }
-  .dev_letter::before {
-    background: $blue;
-    filter: invert(1);
-    z-index: -3;
-  }
-  .dev_letter::after {
-    backdrop-filter: invert(1);
-    z-index: -1;
-  }
-  img#ascii_dev {
-    height: 300px;
-    position: absolute;
-    top: 0%;
-    right: 16.2%;
-  }
+    img {
+      height: 100vh;
+      position: absolute;
+    }
   .designer_letter {
     color: $black;
-    top: 0;
     line-height: 1.1em;
     position: absolute;
     font-family: Monument Extended;
     font-size: 14.6vh;
-  }
-  .designer_letter p {
-    margin-top: 10px;
+    p {
+      margin-top: 10px;
+    }
+  
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 90vh;
+      position: absolute;
+      margin: 5vh 0vw 5vh 5vw;
+      top: 0;
+    }
+    &::before {
+      background: $orange;
+      -webkit-backdrop-filter: invert(1);
+      filter: invert(1);
+      z-index: -3;
+    }
+    &::after {
+      -webkit-backdrop-filter: invert(1);
+      backdrop-filter: invert(1);
+    } 
   }
   .dev_letter {
-    color: $white;
-    font-family: Fira Sans;
+    color: $black;
+    font-family: Noto Sans JP;
     font-size: 11vw;
     position: absolute;
-    bottom: -5vh;
-    right: 0;
-    z-index: -2;
+    z-index: -1;
   }
-  .designer_typo {
-    font-family: Monument Extended;
-    font-size: 11vw;
-    position: absolute;
-  }
+
   ul {
     position: absolute;
     display: grid;
     font-size: 3em;
     list-style-type: none;
     pointer-events: auto;
-  }
-  .list_designer {
-    font-family: Montserrat;
-    bottom: 20vh;
-    font-weight: 800;
-    left: 3vw;
-  }
+  } 
   .list_dev {
-    font-family: Fira Sans;
-    text-align: right;
-    right: 6vw;
-    top: 17vh;
-    font-color: $white;
-  }
-  [class*='hover_area'] {
-    height: 100vh;
-    width: 30vw;
     position: absolute;
-    top: 0;
-    pointer-events: auto;
-  }
-  .dev_hover_area {
-    right: 0;
+    font-size: 4vh;
+    font-family: Courier New;
+    font-weight: bold;
+    text-align: left;
+    color: $black;
+    p {
+      white-space: nowrap;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 90vh;
+      position: absolute;
+      margin: 5vh 5vw;
+    }
+    &::before {
+      background: $blue;
+      -webkit-backdrop-filter: invert(1);
+      filter: invert(1);
+      z-index: -3;
+    }
+    &::after {
+      -webkit-backdrop-filter: invert(1);
+      backdrop-filter: invert(1);
+    } 
   }
 }
-
