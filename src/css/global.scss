@@ -34,7 +34,7 @@ $white: #f0f0f0;
     font-family: Monument Extended;
     font-size: 14.6vh;
     p {
-      margin-top: 10px;
+      margin: 10px 50px;
     }
   
     &::before,
@@ -43,7 +43,7 @@ $white: #f0f0f0;
       display: inline-block;
       height: 90vh;
       position: absolute;
-      margin: 5vh 0vw 5vh 5vw;
+      margin: 5vh 5vw 5vh 0vw;
       top: 0;
     }
     &::before {
@@ -89,7 +89,8 @@ $white: #f0f0f0;
       display: inline-block;
       height: 90vh;
       position: absolute;
-      margin: 5vh 5vw;
+      margin: 5vh 0vw 5vh 5vw;
+
     }
     &::before {
       background: $blue;
