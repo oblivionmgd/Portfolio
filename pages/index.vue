@@ -14,7 +14,7 @@
     <div class="img_top">
       <img src="@/src/image/body.png" />
     </div>
-    <div class="dev_letter">Developer</div>
+    <div class="dev_letter">#Devel<br>oper</div>
   </div>
 </template>
 <script></script>
@@ -36,8 +36,10 @@
     }
   }
   .dev_letter {
-    bottom: 5vh;
+    top: 50%;
     right: 0;
+    text-align: right;
+    transform: translateY(-50%);
   }
   .list_dev {
     top: 0;
