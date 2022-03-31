@@ -1,44 +1,40 @@
 <template>
-  <div class="main">
-    <div class="home">
-      <div class="designer_hover_area"></div>
-      <div class="dev_hover_area"></div>
-      <div class="img_top">
-        <img src="@/src/image/body.png" />
-      </div>
-      <div class="dev_letter">
-        <p>#Developer</p>
-      </div>
-      <ul class="list_dev">
-        <p>guest@OblivionMGD Portfolio % ls -l</p>
-        <router-link to="about"
-          >drwxr-xr-x oblivion staff 1024 May 14 2021 repository</router-link
-        >
-        <router-link to="about"
-          >-rwxr-xr-x oblivion staff 4096 May 14 2021 contact.md</router-link
-        >
-        <router-link to="about"
-          >-rwxr-xr-x oblivion staff 4096 May 14 2021 README.md</router-link
-        >
-        <p>guest@OblivionMGD Portfolio %</p>
-      </ul>
+  <div class="home">
+    <div class="img_top">
+      <img src="@/src/image/body.png" />
     </div>
+    <div class="dev_letter">
+      <p>#Developer</p>
+    </div>
+    <ul class="list_dev">
+      <p>guest@OblivionMGD Portfolio % ls -l</p>
+      <router-link to="about"
+        >drwxr-xr-x oblivion staff 1024 May 14 2021 repository</router-link
+      >
+      <router-link to="about"
+        >-rwxr-xr-x oblivion staff 4096 May 14 2021 contact.md</router-link
+      >
+      <router-link to="about"
+        >-rwxr-xr-x oblivion staff 4096 May 14 2021 README.md</router-link
+      >
+      <p>guest@OblivionMGD Portfolio % cd</p>
+    </ul>
   </div>
 </template>
 <script></script>
 <style lang="scss">
 @import '@/src/css/global.scss';
 .home {
-  img_top {
+  .img_top {
     display: block;
     height: 100vh;
-  }
     img {
       height: 100vh;
       right: 150%;
       position: absolute;
       transform: translateX(50%);
     }
+  }
   .dev_letter {
     color: $black;
     font-family: Noto Sans JP;
@@ -65,10 +61,10 @@
     &::after {
       -webkit-backdrop-filter: invert(1);
       backdrop-filter: invert(1);
+    } 
+    p {
+      z-index: 0;
     }
-  }
-  .dev_letter p {
-    z-index: 0;
   }
   ul {
     position: absolute;
@@ -96,7 +92,7 @@
         position: absolute;
         display: inline-block;
         width: 0%;
-        height: 15%;
+        height: 1em;
         left: 0;
         transition: width 0.7s cubic-bezier(0, 0.7, 0.5, 1),
         transform 0.7s cubic-bezier(0, 0.7, 0.5, 1);

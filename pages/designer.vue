@@ -4,9 +4,9 @@
       <img id="body_under" src="@/src/image/body.png" />
     </div>
     <ul class="list_designer">
-      <router-link to="about">>About</router-link>
-      <router-link to="about">>Contact</router-link>
-      <router-link to="about">>Works//Reel</router-link>
+      <router-link to="index">>About</router-link>
+      <router-link to="index">>Contact</router-link>
+      <router-link to="index">>Works//Reel</router-link>
     </ul>
     <div class="designer_typo">
       <p>DESIGNER</p>
@@ -18,7 +18,8 @@
 @import '@/src/css/global.scss';
 .home { 
   .img_top img {
-    right: 35%;
+    opacity: 0;
+    right: 0;
   }
   
   .designer_typo {
@@ -54,7 +55,7 @@
     }
   }
   ul {
-    font-size: 5vh;
+    font-size: 5em;
     z-index: -2;
   }
   .list_designer {

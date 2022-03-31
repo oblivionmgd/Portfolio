@@ -14,7 +14,7 @@
     <div class="img_top">
       <img src="@/src/image/body.png" />
     </div>
-    <div class="dev_letter">#Deve-<br>loper</div>
+    <div class="dev_letter">#Deve-<br>loper</div> 
   </div>
 </template>
 <script></script>
